@@ -126,13 +126,14 @@ class Worker1(QThread):
                 face_names = []
 
                 for face_encoding in face_encodings:
-                    match = face_recognition.compare_faces(known_faces, face_encoding, tolerance=0.5)
+                    match = face_recognition.compare_faces(known_faces, face_encoding, tolerance=0.4)
                     name = None
 
                     for i in range(len(match)):
                         if match[i]:
                             name = usr_names[i]
                             print(name)
+                            break
                             
                 
                     face_names.append(name)

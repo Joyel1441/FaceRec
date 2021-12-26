@@ -115,7 +115,7 @@ class Ui_NewFaceWindow(object):
             except:
                 pass
 
-            usr_names.append(img_name)
+            usr_names = usr_names + [img_name]
 
             with open('usr_names.pt', 'wb') as f:
                 pickle.dump(usr_names, f)
@@ -123,7 +123,7 @@ class Ui_NewFaceWindow(object):
             image = ImageQt.fromqimage(self.Feedlabel.pixmap().toImage())
             image.save('train.jpg')
 
-            image = face_recognition.load_image_file("C:/Users/Joyel/Desktop/WIN_20211223_22_13_07_Pro.jpg")
+            image = face_recognition.load_image_file("train.jpg")
             face_encoding = face_recognition.face_encodings(image)[0]
 
             known_faces = []
@@ -134,7 +134,7 @@ class Ui_NewFaceWindow(object):
             except:
                 pass
 
-            known_faces.append(face_encoding)
+            known_faces = known_faces + [face_encoding]
 
             with open('saved_embeds.pt', 'wb') as f:
                 pickle.dump(known_faces, f)
