@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'mainScreen.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -51,7 +43,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.startDetection)
         self.pushButton.clicked.connect(self.addNewUser)
         
-        self.main_window.setStyleSheet("background-color: #191919;")
+        self.main_window.setStyleSheet("background-color: #191919; color: white;")
         self.pushButton.setStyleSheet("color: white; border: 2px solid white;")
         self.pushButton_2.setStyleSheet("color: white; border: 2px solid white;")
 
@@ -69,7 +61,19 @@ class Ui_MainWindow(object):
         self.FaceRec()
 
     def addNewUser(self):
-        self.AddUser()
+        usr_name, done = QtWidgets.QInputDialog.getText(self.main_window, 'Enter username', 'Enter username:')
+        usr_pswd, done = QtWidgets.QInputDialog.getText(self.main_window, 'Enter password', 'Enter password:')
+        if usr_name == "admin" and usr_pswd == "admin":
+            self.AddUser()
+        else:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Critical)
+            msg.setText("Wrong username or password")
+            msg.setWindowTitle("Invalid Credentials")
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+
+            msg.exec_()
+        
 
 
 if __name__ == "__main__":

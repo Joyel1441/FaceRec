@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'FaceRec.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 from PyQt5.QtGui import *
@@ -16,10 +8,6 @@ import cv2
 import cv2
 import face_recognition
 import pickle
-
-
-image = face_recognition.load_image_file("C:/Users/Joyel/Desktop/WIN_20211222_17_22_38_Pro.jpg")
-face_encoding = face_recognition.face_encodings(image)[0]
 
 known_faces = []
 usr_names = []
@@ -126,7 +114,7 @@ class Worker1(QThread):
                 face_names = []
 
                 for face_encoding in face_encodings:
-                    match = face_recognition.compare_faces(known_faces, face_encoding, tolerance=0.4)
+                    match = face_recognition.compare_faces(known_faces, face_encoding, tolerance=0.5)
                     name = None
 
                     for i in range(len(match)):
