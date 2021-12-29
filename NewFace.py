@@ -146,7 +146,6 @@ class Ui_NewFaceWindow(object):
 
                 msg.exec_()
                 self.Main(self.main_window)
-
         else:
             self.Main(self.main_window)
 

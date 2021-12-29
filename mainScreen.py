@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.addNewUser)
         
         self.main_window.setStyleSheet("background-color: #191919; color: white;")
-        self.pushButton.setStyleSheet("color: white; border: 2px solid white;")
+        self.pushButton.setStyleSheet("color: white; border: 2px solid white; background-color: #191919; color: white;")
         self.pushButton_2.setStyleSheet("color: white; border: 2px solid white;")
 
 

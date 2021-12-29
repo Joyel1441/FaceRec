@@ -111,17 +111,34 @@ class Worker1(QThread):
                 face_locations = face_recognition.face_locations(rgb_frame)
                 face_encodings = face_recognition.face_encodings(rgb_frame, face_locations)
 
+                if not face_locations:
+                    count = 0
+                else:
+                    count += 1
+ 
+                try:
+                    if count % 4 == 0:
+                        print(max(name_list, key=name_list.count))
+                        count = 0
+                        name_list = []
+                except:
+                    pass
+
                 face_names = []
 
                 for face_encoding in face_encodings:
-                    match = face_recognition.compare_faces(known_faces, face_encoding, tolerance=0.5)
+                    match = face_recognition.compare_faces(known_faces, face_encoding, tolerance=0.4)
                     name = None
-
+                    x = 0
                     for i in range(len(match)):
+                        x += 1
                         if match[i]:
                             name = usr_names[i]
-                            print(name)
+                            # print(name)
+                            name_list.append(name)
                             break
+                        if x == len(match):
+                            name_list.append("Unknown")
                             
                 
                     face_names.append(name)
