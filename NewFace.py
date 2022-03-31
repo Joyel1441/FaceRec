@@ -165,7 +165,17 @@ class Worker1(QThread):
         while self.ThreadActive:
             ret, frame = Capture.read()
             if ret:
-                rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                # rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+                # Experimental
+                        
+                detector = cv2.CascadeClassifier("haarcascade\haarcascade_frontalface_default.xml")
+                rects = detector.detectMultiScale(frame, scaleFactor=1.05, minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE)
+
+                for (x, y, w, h) in rects:
+                    cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+                # End
                 
                 ConvertToQtFormat = QImage(frame.data, frame.shape[1], frame.shape[0], QImage.Format_RGB888)
                 pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)

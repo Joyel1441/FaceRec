@@ -12,11 +12,11 @@ import pickle
 known_faces = []
 usr_names = []
 
-with open('saved_embeds.pt', 'rb') as f:
-    known_faces = pickle.load(f)
+# with open('saved_embeds.pt', 'rb') as f:
+#     known_faces = pickle.load(f)
+# with open('usr_names.pt', 'rb') as f:
+#     usr_names = pickle.load(f)
 
-with open('usr_names.pt', 'rb') as f:
-    usr_names = pickle.load(f)
 
 face_locations = []
 face_encodings = []
@@ -34,6 +34,12 @@ class FaceRec(object):
         self.facerec_window.hide()
 
     def setupUi(self, FaceRecWindow, MainWindow):
+        with open('saved_embeds.pt', 'rb') as f:
+            global known_faces
+            known_faces = pickle.load(f)
+        with open('usr_names.pt', 'rb') as f:
+            global usr_names
+            usr_names = pickle.load(f)
         self.main_window = MainWindow
         self.facerec_window = FaceRecWindow
         FaceRecWindow.setObjectName("FaceRecWindow")

@@ -61,8 +61,8 @@ class Ui_MainWindow(object):
         self.FaceRec()
 
     def addNewUser(self):
-        usr_name, done = QtWidgets.QInputDialog.getText(self.main_window, 'Enter username', 'Enter username:')
-        usr_pswd, done = QtWidgets.QInputDialog.getText(self.main_window, 'Enter password', 'Enter password:')
+        usr_name, done = QtWidgets.QInputDialog.getText(self.main_window, 'Login', 'Enter username:')
+        usr_pswd, done = QtWidgets.QInputDialog.getText(self.main_window, 'Login', 'Enter password:')
         if usr_name == "admin" and usr_pswd == "admin":
             self.AddUser()
         else:
