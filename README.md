@@ -16,6 +16,11 @@
 Main libraries used for face detection are dlib face-recognition library and open-cv
 
 ### Screenshots
-[![Main Screen](https://raw.githubusercontent.com/Joyel1441/FaceRec/463a3e6bba5d32d0492e552c55439da496aa5fc0/main_screen.png?raw=true "Main Screen")](https://raw.githubusercontent.com/Joyel1441/FaceRec/463a3e6bba5d32d0492e552c55439da496aa5fc0/main_screen.png?raw=true"Main Screen")
+#### Main Screen
+![Main Screen](https://raw.githubusercontent.com/Joyel1441/FaceRec/463a3e6bba5d32d0492e552c55439da496aa5fc0/main_screen.png?raw=true "Main Screen")
+#### Adding new face
+![New Face Screen](https://github.com/Joyel1441/FaceRec/blob/9c9cf81ae0c7c587ffde68ad1e9787377894c4bd/newface.png?raw=true "New Face Screen")
+#### Face recognition
+![Recognition Screen](https://github.com/Joyel1441/FaceRec/blob/9c9cf81ae0c7c587ffde68ad1e9787377894c4bd/detection.png?raw=true "Recognition Screen")
 
 If you have any ideas or improvements to be implemented, feel free to contribute
