@@ -1,5 +1,5 @@
 # FaceRec
-*fFace recognition software having the capacity to add new users, as well as the ability to learn a face from only one image.*
+*Face recognition software having the capacity to add new users, as well as the ability to learn a face from only one image.*
 
 ### Installation instructions
 ###### Step 1: Clone repository
