@@ -4,7 +4,7 @@
 ### Installation instructions
 ###### Step 1: Clone repository
 `git clone https://github.com/Joyel1441/FaceRec`
-###### Step 2: Install repository (python 3.6 required)
+###### Step 2: Install software (python 3.6 required)
 `python -r requirements.txt`
 ###### Step 3: Run software
 `python mainScreen.py`
