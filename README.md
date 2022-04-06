@@ -15,4 +15,7 @@
 **mainScreen.py**: *main file which calls FaceRec3 or NewFace* \
 Main libraries used for face detection are dlib face-recognition library and open-cv
 
+### Screenshots
+[![Main Screen]](https://imgur.com/kTASA9W "Main Screen")
+
 If you have any ideas or improvements to be implemented, feel free to contribute
