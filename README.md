@@ -16,6 +16,6 @@
 Main libraries used for face detection are dlib face-recognition library and open-cv
 
 ### Screenshots
-[![Main Screen]](https://imgur.com/kTASA9W "Main Screen")
+[![Main Screen](https://raw.githubusercontent.com/Joyel1441/FaceRec/463a3e6bba5d32d0492e552c55439da496aa5fc0/main_screen.png?raw=true "Main Screen")](https://raw.githubusercontent.com/Joyel1441/FaceRec/463a3e6bba5d32d0492e552c55439da496aa5fc0/main_screen.png?raw=true"Main Screen")
 
 If you have any ideas or improvements to be implemented, feel free to contribute
