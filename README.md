@@ -5,4 +5,4 @@ Feel free to contribute 🌟🌟
 Requires python 3.6
 
 
-(Installation instructions will be added soon...)
+(Documentation and Installation instructions will be added soon...)
