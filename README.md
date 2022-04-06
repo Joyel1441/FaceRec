@@ -13,6 +13,9 @@
 **FaceRec3.py**: *contains code which can detect faces and recognize them* \
 **NewFace.py**: *contains code which can add a new face for recognition* \
 **mainScreen.py**: *main file which calls FaceRec3 or NewFace* \
+Default username and password to add a new face: \
+username: admin \
+password: admin \
 Main libraries used for face detection are dlib face-recognition library and open-cv
 
 ### Screenshots
